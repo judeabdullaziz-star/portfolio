@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Reveal } from "@/components/reveal";
 import { SorisArt } from "@/components/soris-art";
@@ -28,8 +29,8 @@ export function Home() {
     <section className="section projects" id="work" aria-label="Selected work">
       <Reveal><p className="eyebrow">Selected work</p><h2>Projects with<br /><em>presence.</em></h2><p className="section-intro">A selection of identity, packaging and image-making work built to stay with you.</p></Reveal>
       <Reveal delay={0.1}><article className="project-card">
-        <a href="/projects/soris" aria-label="View Soris case study"><SorisArt /></a>
-        <div className="project-copy"><p>01 / Featured project</p><h3>Soris</h3><p>A conceptual perfume identity inspired by the tension between stillness and sensation. A precise visual system for a scent imagined as an object of ritual.</p><ul><li>Brand identity</li><li>Packaging</li><li>Art direction</li></ul><a className="case-link" href="/projects/soris">View case study <b>↗</b></a></div>
+        <Link href="/projects/soris" aria-label="View Soris case study"><SorisArt /></Link>
+        <div className="project-copy"><p>01 / Featured project</p><h3>Soris</h3><p>A conceptual perfume identity inspired by the tension between stillness and sensation. A precise visual system for a scent imagined as an object of ritual.</p><ul><li>Brand identity</li><li>Packaging</li><li>Art direction</li></ul><Link className="case-link" href="/projects/soris">View case study <b>↗</b></Link></div>
       </article></Reveal>
     </section>
 
